@@ -1,0 +1,9 @@
+server:
+  port: 0
+spring:
+  application:
+    name: fibonacci-microservice
+    description: Spring Boot Fibonacci Microservice
+  cloud:
+    config:
+      enabled: false
