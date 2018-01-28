@@ -1,7 +1,9 @@
 # fibonacci-microservice
 This application demostrates Spring-Boot enabled application.
 There are 3 different modes to calculate fibonaccy N-th number
-
+### Binet
+### Loop
+### Recursive
 
 
 ## run: gradlew bootRun
