@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class RecursiveAlgorithm extends AlgorithmFib {
 
-    {
-        mode = CalcMode.RECURSIVE;
+    @Override
+    public CalcMode getMode() {
+        return CalcMode.RECURSIVE;
     }
 
     @Override

@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoopAlgorithm extends AlgorithmFib {
 
-    {
-        mode = CalcMode.LOOP;
+    @Override
+    public CalcMode getMode() {
+        return CalcMode.LOOP;
     }
 
     @Override

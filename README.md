@@ -1,17 +1,21 @@
 # fibonacci-microservice
-This application demostrates Spring-Boot enabled application.
-There are 3 different modes to calculate fibonaccy N-th number
-- Binet  
-- Loop  
-- Recursive  
 
-## run: 
-gradlew bootRun  
+## This Microservice implements 3 algorithms to calculate Nth Fibonacci number:
 
-## build: 
-gradlew clean build  
+- Binet
+- Loop
+- Recursive
 
-## start app: 
-java -jar ./build/libs/application.jar  
+**Build:** _gradlew build_  
+**Run:** _gradlew bootRun_
 
-## API documented with Swagger. Start the app and go to: http://localhost:8080 
+Microservice starts on random port.
+
+As it runs you can access swagger api at: _**http://localhost:{port}**_
+
+**Unit Test:** [FibonacciServiceTest.groovy](https://github.com/valchkou/fibonacci-microservice/blob/master/src/test/groovy/com/valchkou/cloud/service/FibonacciServiceTest.groovy)
+
+**Integration Test:** [FibonacciControllerTest.groovy](https://github.com/valchkou/fibonacci-microservice/blob/master/src/test/groovy/com/valchkou/cloud/web/FibonacciControllerTest.groovy)
+
+
+**Requres Java 8 to compile and run.**

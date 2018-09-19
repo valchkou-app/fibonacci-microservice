@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinetAlgorithm extends AlgorithmFib {
 
-    {
-        mode = CalcMode.BINET;
+    @Override
+    public CalcMode getMode() {
+        return CalcMode.BINET;
     }
 
     @Override

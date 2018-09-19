@@ -19,7 +19,6 @@ public class FibonacciService {
         long result = alg.calc(nth);
         t = System.currentTimeMillis() - t;
 
-        // return response wrapper
         return new FibonacciResult(mode, result, t);
     }
 

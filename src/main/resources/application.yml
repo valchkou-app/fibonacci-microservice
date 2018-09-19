@@ -1,10 +1,15 @@
 server:
   port: 8080
 
-management:
-  port: 9090
-
 spring:
   application:
     name: fibonacci-microservice
     description: Spring Boot Fibonacci Microservice
+  boot:
+    admin:
+      client:
+        enabled: false
+        url: http://localhost:8888
+management:
+  endpoints:
+    enabled-by-default: true

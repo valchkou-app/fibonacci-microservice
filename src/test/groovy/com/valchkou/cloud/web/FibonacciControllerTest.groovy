@@ -15,9 +15,6 @@ import static org.hamcrest.Matchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-/**
- * Created by evalchkou on 9/23/2017.
- */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Main.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
