@@ -24,7 +24,7 @@ repositories {
 }
 
 ext {
-    springBootAdminVersion = '2.0.2'
+    springBootAdminVersion = '2.0.3'
     springCloudVersion = 'Finchley.SR1'
     swaggerVersion = '2.9.2'
 }
@@ -33,6 +33,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.springframework.boot:spring-boot-configuration-processor")
+    implementation('org.springframework.cloud:spring-cloud-starter-sleuth')
 
     // integration with boot admin
     compile('de.codecentric:spring-boot-admin-starter-client')
@@ -40,8 +41,7 @@ dependencies {
     //api documentation
     compile("io.springfox:springfox-swagger2:${swaggerVersion}")
     compile("io.springfox:springfox-swagger-ui:${swaggerVersion}")
-
-    compileOnly ('org.projectlombok:lombok:1.18.2')
+//    compileOnly ('org.projectlombok:lombok:1.18.2')
 
     testCompile('org.codehaus.groovy:groovy')
     testCompile ("org.springframework.boot:spring-boot-starter-test")

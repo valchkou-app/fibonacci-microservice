@@ -2,7 +2,7 @@
 <configuration>
 
     <jmxConfigurator />
-    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%t{10}] %logger{15}:%line - %msg%n" />
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%X{X-B3-TraceId:-}, %X{X-B3-SpanId:-} ] %-5level [%t{10}] %logger{15}:%line - %msg%n" />
 
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -12,9 +12,9 @@
         </encoder>
     </appender>
 
-    <logger name="com.valchkou" level="DEBUG" />
+    <!--<logger name="com.valchkou" level="INFO" />-->
 
-    <root level="WARN">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
