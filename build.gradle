@@ -4,9 +4,11 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'com.bmuschko:gradle-docker-plugin:4.0.0'
     }
 }
 
@@ -15,12 +17,15 @@ apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+
 group = 'com.valchkou.cloud'
-version = '1.0'
+version = ''
 sourceCompatibility = 1.8
+archivesBaseName = "app"
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
 }
 
 ext {
@@ -30,9 +35,9 @@ ext {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-actuator')
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile("org.springframework.boot:spring-boot-configuration-processor")
+    implementation('org.springframework.boot:spring-boot-starter-actuator')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation("org.springframework.boot:spring-boot-configuration-processor")
     implementation('org.springframework.cloud:spring-cloud-starter-sleuth')
 
     // integration with boot admin
@@ -58,8 +63,4 @@ dependencyManagement {
         mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
-}
-
-jar {
-    archiveName = 'application.jar'
 }

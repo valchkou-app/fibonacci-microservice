@@ -9,12 +9,11 @@ spring:
     admin:
       client:
         enabled: true
-        url: http://localhost:8888/adminserver
+        url: http://10.5.47.129:8888/adminserver
+        management-url: ${DOCKER_HOST}:${DOCKER_PORT}
 management:
   endpoints:
     web:
       exposure:
         include: "*"
     enabled-by-default: true
-  server:
-    port: 9000
